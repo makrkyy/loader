@@ -1,22 +1,18 @@
 
-getgenv().deceit = {
+getgenv().Deceit = {
     ['Whitelist'] = {
         ['KEY'] = "Place ur luarmor key here",
     },
-    ['settings'] = {
-        ['Checks'] = {
-            ['Auto Mute Boombox'] = false,
-            ['Auto Low GFX'] = false,
-            ['Esp Box'] = false,
-        },
-        ['intro'] = {
-            ['Enabled'] = true,
-        }
+    ['Intro'] = {
+        ['Enabled'] = true,
     },
     ['Silent Aim'] = {
         ['Enabled'] = true,
-        ['Targetting'] = {
-            ['Keybind Enabled'] = false,
+        ['Prediction'] = 0.1474685, 
+        ['Anti Ground Shots'] = false,
+        ['Hit Chance'] = 100,
+        ['Switch'] = {
+            ['Enabled'] = false,
             ['Keybind'] = "P",
         },
         ['Checks'] = {
@@ -25,26 +21,19 @@ getgenv().deceit = {
             ['Death'] = true,
             ['grabbed'] = true,
         },
-        ['Config'] = {
-            ['Hit Chance'] = 100,
-            ['Points'] = {
-                ['Point'] = "HumanoidRootPart",
-                ['Point Offset'] = 0,
-                ['Nearest Part'] = false,
-                ['Nearest Point'] = true,
+        ['AimPart'] = {
+            ['Rig'] = "HumanoidRootPart",
+            ['Point Offset'] = 0,
+            ['Nearest Part'] = false,
+            ['Nearest Point'] = true,
             },
-            ['Velocity'] = {
-                ['Prediction'] = 0.1450685, 
-                ['Anti Ground Shots'] = false,
-            }
-        },
     },
-    ['camlock'] = {
+    ['Aim Assist'] = {
         ['Enabled'] = true,
         ['Prediction'] = 0.028,
-        ['Key'] = "Q",
+        ['Keybind'] = "Q",
         ['Notify'] = false,
-        ['Point'] = "HumanoidRootPart",
+        ['Rig'] = "HumanoidRootPart",
         ['Point Offset'] = 0,
         ['Nearest Part'] = false,
         ['Nearest Point'] = false,
@@ -53,7 +42,7 @@ getgenv().deceit = {
             ['Enabled'] = true,
             ['Value'] = 0.09
         },
-        ['camChecks'] = {
+        ['Checks'] = {
             ['Unlock On KO'] = true,
             ['Unlock Outside FOV'] = false,
             ['Unlock Behind Wall'] = false
@@ -72,45 +61,105 @@ getgenv().deceit = {
             ['Prediction'] = true, 
             ['Smoothness'] = true, 
             ['Hit Chance'] = true,
-                ['Close Detection'] = 16,    ['Close FOV'] = 12,    ['Close Prediction'] = 0.1343536753,    ['Close Smoothness'] = 1,    ['Close Hit Chance'] = 100,
-                ['Mid Detection'] = 42,      ['Mid FOV'] = 32,      ['Mid Prediction'] = 0.1296543456,      ['Mid Smoothness'] = 1,      ['Mid Hit Chance'] = 100,
-                ['Far Detection'] = 100,     ['Far FOV'] = 33,      ['Far Prediction'] = 0.12,              ['Far Smoothness'] = 1,      ['Far Hit Chance'] = 100,
+                ['Close Detection'] = 16,
+                ['Close FOV'] = 12,
+                ['Close Prediction'] = 0.1343536753,
+                ['Close Smoothness'] = 1,
+                ['Close Hit Chance'] = 100,
+                ['Mid Detection'] = 42,
+                ['Mid FOV'] = 32,
+                ['Mid Prediction'] = 0.1296543456,
+                ['Mid Smoothness'] = 1,
+                ['Mid Hit Chance'] = 100,
+                ['Far Detection'] = 100,
+                ['Far FOV'] = 33,
+                ['Far Prediction'] = 0.12,
+                ['Far Smoothness'] = 1,
+                ['Far Hit Chance'] = 100,
         },
         ['Revolver'] = {
             ['FOV'] = true, 
             ['Prediction'] = true, 
             ['Smoothness'] = true, 
             ['Hit Chance'] = true,
-                ['Close Detection'] = 16,    ['Close FOV'] = 12,    ['Close Prediction'] = 0.1343536753,    ['Close Smoothness'] = 1,    ['Close Hit Chance'] = 100,
-                ['Mid Detection'] = 42,      ['Mid FOV'] = 32,      ['Mid Prediction'] = 0.1296543456,      ['Mid Smoothness'] = 1,      ['Mid Hit Chance'] = 100,
-                ['Far Detection'] = 100,     ['Far FOV'] = 33,      ['Far Prediction'] = 0.12,              ['Far Smoothness'] = 1,      ['Far Hit Chance'] = 100,
+                ['Close Detection'] = 16,
+                ['Close FOV'] = 12,
+                ['Close Prediction'] = 0.1343536753,
+                ['Close Smoothness'] = 1,
+                ['Close Hit Chance'] = 100,
+                ['Mid Detection'] = 42,
+                ['Mid FOV'] = 32,
+                ['Mid Prediction'] = 0.1296543456,
+                ['Mid Smoothness'] = 1,
+                ['Mid Hit Chance'] = 100,
+                ['Far Detection'] = 100,
+                ['Far FOV'] = 33,
+                ['Far Prediction'] = 0.12,
+                ['Far Smoothness'] = 1,
+                ['Far Hit Chance'] = 100,
         },
         ['Tactical Shotgun'] = {
             ['FOV'] = true, 
             ['Prediction'] = true, 
             ['Smoothness'] = true, 
             ['Hit Chance'] = true,
-                ['Close Detection'] = 16,    ['Close FOV'] = 12,    ['Close Prediction'] = 0.1343536753,    ['Close Smoothness'] = 1,    ['Close Hit Chance'] = 100,
-                ['Mid Detection'] = 42,      ['Mid FOV'] = 32,      ['Mid Prediction'] = 0.1296543456,      ['Mid Smoothness'] = 1,      ['Mid Hit Chance'] = 100,
-                ['Far Detection'] = 100,     ['Far FOV'] = 33,      ['Far Prediction'] = 0.12,              ['Far Smoothness'] = 1,      ['Far Hit Chance'] = 100,
+                ['Close Detection'] = 16,
+                ['Close FOV'] = 12,
+                ['Close Prediction'] = 0.1343536753,
+                ['Close Smoothness'] = 1,
+                ['Close Hit Chance'] = 100,
+                ['Mid Detection'] = 42,
+                ['Mid FOV'] = 32,
+                ['Mid Prediction'] = 0.1296543456,
+                ['Mid Smoothness'] = 1,
+                ['Mid Hit Chance'] = 100,
+                ['Far Detection'] = 100,
+                ['Far FOV'] = 33,
+                ['Far Prediction'] = 0.12,
+                ['Far Smoothness'] = 1,
+                ['Far Hit Chance'] = 100,
         },
         ['Shotgun'] = {
             ['FOV'] = true, 
             ['Prediction'] = true, 
             ['Smoothness'] = true, 
             ['Hit Chance'] = true,
-                ['Close Detection'] = 16,    ['Close FOV'] = 12,    ['Close Prediction'] = 0.1343536753,    ['Close Smoothness'] = 1,    ['Close Hit Chance'] = 100,
-                ['Mid Detection'] = 42,      ['Mid FOV'] = 32,      ['Mid Prediction'] = 0.1296543456,      ['Mid Smoothness'] = 1,      ['Mid Hit Chance'] = 100,
-                ['Far Detection'] = 100,     ['Far FOV'] = 33,      ['Far Prediction'] = 0.12,              ['Far Smoothness'] = 1,      ['Far Hit Chance'] = 100,
+                ['Close Detection'] = 16,
+                ['Close FOV'] = 12,
+                ['Close Prediction'] = 0.1343536753,
+                ['Close Smoothness'] = 1,
+                ['Close Hit Chance'] = 100,
+                ['Mid Detection'] = 42,
+                ['Mid FOV'] = 32,
+                ['Mid Prediction'] = 0.1296543456,
+                ['Mid Smoothness'] = 1,
+                ['Mid Hit Chance'] = 100,
+                ['Far Detection'] = 100,
+                ['Far FOV'] = 33,
+                ['Far Prediction'] = 0.12,
+                ['Far Smoothness'] = 1,
+                ['Far Hit Chance'] = 100,
         },
         ['Rifle'] = {
             ['FOV'] = true, 
             ['Prediction'] = true, 
             ['Smoothness'] = true, 
             ['Hit Chance'] = true,
-                ['Close Detection'] = 16,    ['Close FOV'] = 12,    ['Close Prediction'] = 0.1343536753,    ['Close Smoothness'] = 1,    ['Close Hit Chance'] = 100,
-                ['Mid Detection'] = 42,      ['Mid FOV'] = 32,      ['Mid Prediction'] = 0.1296543456,      ['Mid Smoothness'] = 1,      ['Mid Hit Chance'] = 100,
-                ['Far Detection'] = 100,     ['Far FOV'] = 33,      ['Far Prediction'] = 0.12,              ['Far Smoothness'] = 1,      ['Far Hit Chance'] = 100,
+                ['Close Detection'] = 16,
+                ['Close FOV'] = 12,
+                ['Close Prediction'] = 0.1343536753,
+                ['Close Smoothness'] = 1,
+                ['Close Hit Chance'] = 100,
+                ['Mid Detection'] = 42,
+                ['Mid FOV'] = 32,
+                ['Mid Prediction'] = 0.1296543456,
+                ['Mid Smoothness'] = 1,
+                ['Mid Hit Chance'] = 100,
+                ['Far Detection'] = 100,
+                ['Far FOV'] = 33,
+                ['Far Prediction'] = 0.12,
+                ['Far Smoothness'] = 1,
+                ['Far Hit Chance'] = 100,
         }
     },
     ['Resolver'] = {
@@ -136,10 +185,10 @@ getgenv().deceit = {
         },
         ['Circle'] = {
             ['Silent'] = {
-                ['Visible'] = true,
+                ['Visible'] = false,
                 ['Stick'] = false,
                 ['Filled'] = false,
-                ['Size'] = 90,
+                ['Size'] = 150,
                 ['Thickness'] = 1,
                 ['Transparency'] = 1,
                 ['Color'] = Color3.fromRGB(223, 59, 26)
@@ -160,7 +209,7 @@ getgenv().deceit = {
     },
     ['Airshot'] = {
         ['Enabled'] = true,
-        ['Point'] = "LowerTorso"
+        ['Rig'] = "LowerTorso"
     },
     ['MemorySpoofer'] = {
         ["MemSpoofer"] = true, 
@@ -182,8 +231,6 @@ getgenv().deceit = {
         ['Speed'] = 2,
     }
 }
-
-
 
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/makrkyy/decit-beta/main/beta", true))()
